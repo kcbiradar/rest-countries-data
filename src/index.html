@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <title>Country</title>
+    <style>
+        #search {
+            padding: 12px;
+            outline: none;
+        }
+        svg {
+            margin-top: 17px;
+        }
+        #border-countries {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<bod>
+    <main>
+        <nav class="shadow-md my-8">
+            <div class="nav-container flex justify-between xl:container mx-auto">
+                <div>
+                    <h1 class="font-bold">Where in the World?</h1>
+                </div>
+                <div class="flex">
+                    <span class="dark-image"></span>
+                    <svg class="dark-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"/></svg>
+                    <button id="dark-toggle">Dark Mode</button>
+                </div>
+            </div>
+        </nav>
+        <section class="flex justify-between xl:container mx-auto text-black" id="search">
+            <div class="mt-5 flex align-middle justify-center border" id="seach-section">
+                <svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+                <input type="search" name="search" id="search1" placeholder="Search a country" class="pl-4">
+            </div>
+            <div class="mt-5 flex px-2 bg-slate-100">
+                <select name="drop-down" id="region-drop-down" class="px-4 py-4 bg-transparent outline-none border-none">
+                    <option value="" >Filter By Region</option>
+                    <option value="Antarctic">Antarctic</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Americas">Americas</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Oceania">Oceania</option>
+                </select>
+            </div>
+        </section>
+        <section class="xl:container mx-auto">
+            <div id="display-countries" class="flex flex-wrap justify-start mt-11">
+
+            </div>
+        </section>
+        <section class="xl:container mx-auto mt-8">
+            <div id="country-details" style="display: none;">
+                
+                <div class="flex">
+                    <svg width="20px" height= "20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+                    <button id="re-render" style="margin-top: 15px; margin-left: 5px;">Back</button>
+                </div>
+
+                <div id="details" class="flex mt-20">
+                    <div id="flag">
+
+                    </div>
+                    <div>
+                        <div class="flex boxes">
+                            <div id="basic-details">
+
+                            </div>
+                            <div id="adv-details">
+    
+                            </div>
+                        </div>
+                        <div id="border-countries" class="flex">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
